@@ -53,7 +53,6 @@ namespace MvcStorageFileAzure.Repositories
         }
         public List<Motorista> ReadXmlFile(String filename)
         {
-            //MemoryStream content = new MemoryStream();
             CloudFile xmlfile = this.root.GetFileReference(filename);
             String datosxml = xmlfile.DownloadText(System.Text.Encoding.UTF8);
             XDocument document = XDocument.Parse(datosxml);
