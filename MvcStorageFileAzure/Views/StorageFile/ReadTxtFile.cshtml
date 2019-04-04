@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "_ReadTxtFile";
+}
+<h2>Contenido del fichero TXT</h2>
+@if (ViewBag.Contenido != null)
+{
+    <h4>@ViewBag.Contenido</h4>
+}
+else
+{
+    <h4 style=”color:red”>Error</h4>
+}
+<br />
+
+@Html.ActionLink("Volver al listado", "Index", "StorageFile")

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<motoristas>
+  <motorista>
+    <nombre>Marc Marquez</nombre>
+    <dorsal>https://motorrotulo.com/1916-large_default/adhesivo-dorsal-marc-marquez-moderno.jpg</dorsal>
+    <titulos>7</titulos>
+    <debut>2008</debut>
+    <equipo>
+      <nombre>Repsol Honda Team</nombre>
+      <imagen>https://vinyl-arte.com/WebRoot/Store14/Shops/852c7dbf-f141-4eec-a68e-5272e7e0570d/58D4/04E8/6BDF/4FD4/F1E6/0A48/3534/4000/hrc-logo_ml.png</imagen>
+    </equipo>
+  </motorista>
+  <motorista>
+    <nombre>Valentino Rossi</nombre>
+    <dorsal>https://www.motorbikemag.es/tienda/wp-content/uploads/2017/03/VRUST268328_1.jpg</dorsal>
+    <titulos>9</titulos>
+    <debut>1996</debut>
+    <equipo>
+      <nombre>Yamaha Factory Racing</nombre>
+      <imagen>https://images.esellerpro.com/2489/I/169/892/6/LOGO%20YAMAHA.png.jpg</imagen>
+    </equipo>
+  </motorista>
+  <motorista>
+    <nombre>Andrea Dovizioso</nombre>
+    <dorsal>http://cdn-1.motorsport.com/static/custom/car-thumbs/MOTOGP_2018/NUMBERS/dovizioso.png</dorsal>
+    <titulos>1</titulos>
+    <debut>2001</debut>
+    <equipo>
+      <nombre>Ducati Team</nombre>
+      <imagen>https://s3-eu-west-1.amazonaws.com/crash.net/visordown.com/styles/v2_large/s3/field/image/ducati-team-logo.jpg?itok=LXPG6N3T</imagen>
+    </equipo>
+  </motorista>
+</motoristas>

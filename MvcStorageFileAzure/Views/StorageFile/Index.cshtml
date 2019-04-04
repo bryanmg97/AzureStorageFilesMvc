@@ -1,0 +1,35 @@
+﻿@model List<String>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ficheros encontrados en Azure Storage</h2>
+
+<h3>@Html.ActionLink("Subir Archivo", "UploadFile", "StorageFile")</h3>
+
+@if (Model != null)
+{
+    <table class="table table-bordered">
+        <tr>
+            <td>Nombre</td>
+            <td>Opciones</td>
+        </tr>
+        @foreach (String file in Model)
+        {
+            <tr>
+                <td>@file</td>
+                <td>
+                    @if (file.EndsWith("xml"))
+                    {
+                        @Html.ActionLink("Ver archivo", "ReadXmlFile", "StorageFile", new { filename = file }, null)
+                    }
+                    else if (file.EndsWith("txt"))
+                    {
+                        @Html.ActionLink("Ver archivo", "ReadTxtFile", "StorageFile", new { filename = file }, null)
+                    } |
+                    @Html.ActionLink("Eliminar archivo", "DeleteFile", "StorageFile", new { filename = file }, null)
+                </td>
+            </tr>
+        }
+    </table>
+}

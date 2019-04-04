@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MvcStorageFileAzure.Models.Motorista>
+
+@{
+    ViewBag.Title = "ReadXmlFile";
+}
+
+<h2>ReadXmlFile</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dorsal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Debut)
+        </th>
+        <th>@Html.DisplayNameFor(model => model.Equipo)</th>
+        <th>Imagen del equipo</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                <img src="@item.Dorsal" style="width:110px;height:100px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Debut)
+            </td>
+            @foreach (var eq in item.Equipo)
+            {
+                <td>
+                    <p>@eq.Nombre</p>
+                </td>
+                <td>
+                    <span><img src="@eq.Imagen" style="width:150px;height:100px;" /></span>
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Volver al listado", "Index", "StorageFile")
